@@ -1,12 +1,12 @@
-const movieContainer = document.querySelector('movie-container');
+const moviesContainer = document.querySelector('.movies');
 
 const movies = [
     {image: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/74xTEgt7R36Fpooo50r9T25onhq.jpg", 
     title: "Batman",
     rating: 9.4,
     year: 2022,
-    description: "After his parents are murdered, billionaire playboy Bruce Wayne is adopted by a rich family. He then embarks on a journey to become a batman.", 
-    isFavorited: false },
+    description: "After his parents are murdered, billionaire playboy Bruce Wayne is adopted by your butler. He then embarks on a journey to become a batman.", 
+    isFavorited: true },
 ];
 
 window.onload = function() {
@@ -17,14 +17,14 @@ function renderMovie(movie) {
     const {title, image, rating, year, description, isFavorited} = movie;
 
     const movieElement = document.createElement('div');
-    movieElement.classList.add('movie-container');
+    movieElement.classList.add('movie');
     moviesContainer.appendChild(movieElement);
 
     const movieInformations = document.createElement('div');
     movieInformations.classList.add('movie-informations');
 
     const movieImageContainer = document.createElement('div');
-    movieImageContainer.classList.add('movie-image-container');
+    movieImageContainer.classList.add('movie-image');
     const movieImage = document.createElement('img');
     movieImage.src = image;
     movieImage.alt = `${title} Poster`;

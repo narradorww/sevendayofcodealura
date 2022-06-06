@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,54 +10,20 @@
 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Filmes Populares</title>
 </head>
-<body class="body">
-<header class="header">
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1>Filmes Populares</h1>
-            <div class="search">
-            <input type="text" id="search" placeholder="Digite algum filme para pesquisar...">
-                <button class="search-button" type="submit">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
-            </div>
-            <div class="check-box">
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox">
-                 
-           
-                <P>Mostrar meus filmes favoritos apenas</P>
-            </label>
-            </div>
-            
-           
+<body>
+    <main>
+        <h2> Filmes Populares</h2>
+        <div class="input-container">
+            <input type="text" name="movie-name" id="movie-name" placeholder="Digite algum filme para pesquisar...">
+            <img src="assets/search-icon.svg" alt="Ícone de pesquisa" class="searchIcon">
         </div>
-    </div>
 
-<div class="movie-container">
-    <div class="avatar-container">
-    <img class="movie-avatar" src=  alt="">
-</div>
-    <div class="movie-title">
-        <h2>Batman (2002)</h2>
-        <div class="movie-details">
-            <div class="movie-rating">
-                <i class="fa fa-star-half-full" aria-hidden="true"></i>
-                <p class="details">9.4</p>
-            </div>
-            <div class="movie-favorite">
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                <p class="details"> Favoritar</p>
-            </div>
+    <div class="showOnlyFavorites">
+        <input type="checkbox" name="onlyFavorites" id="onlyFavorites">
+        <label for="onlyFavorites">Mostrar apenas meus filmes favoritos</label>
     </div>
-
-    </div>
-    <div class="movie-description">
-        <p>Mussum Ipsum, cacilds vidis litro abertis. Cevadis im ampola pa arma uma pindureta.Suco de cevadiss deixa as pessoas mais interessantis.Leite de capivaris, leite de mula manquis sem cabeça.Mé faiz elementum girarzis, nisi eros vermeio.</p>
-    </div>
-
-
-</div>    
-    
+    <div class="movies"></div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
